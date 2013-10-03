@@ -2,6 +2,8 @@ package com.bmarohnic.openit;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.pm.ActivityInfo;
+import android.content.res.Configuration;
 import android.view.Menu;
 
 public class MainActivity extends Activity {
@@ -9,8 +11,10 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 		setContentView(R.layout.activity_main);
 	}
+
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
