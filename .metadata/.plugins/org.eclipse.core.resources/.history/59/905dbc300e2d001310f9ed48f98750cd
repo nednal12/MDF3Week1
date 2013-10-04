@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">OpenIt</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    
+    <string-array name="madlib_adjective">
+        <item>slow</item>
+        <item>quick</item>
+        <item>docile</item>
+    </string-array>
+    
+    <string-array name="madlib_noun">
+        <item>fox</item>
+        <item>cat</item>
+        <item>mouse</item>
+    </string-array>
+
+</resources>

@@ -2,17 +2,18 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     android:background="@drawable/backrepeat" >
 
-    <EditText
+    <Spinner 
+            android:id="@+id/adjectiveSpinner"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="5dp"
-            android:hint="@string/url_edittext_hint"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:textColor="@android:color/holo_blue_light" />
+            android:layout_height="wrap_content"/>
+    
+    <Spinner 
+            android:id="@+id/nounSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
     
     <Button
         android:id="@+id/launchImplicitButton"
@@ -21,5 +22,6 @@
         android:onClick="implicitClick"
         android:text="@string/url_button_text" />
 
+    
 </LinearLayout>
 

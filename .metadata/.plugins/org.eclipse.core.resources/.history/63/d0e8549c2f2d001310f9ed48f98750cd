@@ -1,0 +1,45 @@
+package com.bmarohnic.openit;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.content.pm.ActivityInfo;
+import android.content.res.Configuration;
+import android.util.Log;
+import android.view.Menu;
+import android.widget.TextView;
+
+public class MainActivity extends Activity {
+	
+	TextView sentenceTextView;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+		setContentView(R.layout.activity_main);
+		
+		String adjectiveString = null;
+		String nounString = null;
+		
+		Log.i("onCreate", "This is being called");
+		Bundle data = getIntent().getExtras();
+		if(data != null)
+		{
+			adjectiveString = data.getString("adjectiveString");
+			nounString = data.getString("nounString");
+			Log.i("onCreate", "adjectiveString: " + adjectiveString);
+			Log.i("onCreate", "nounString: " + nounString);
+			
+			sentenceTextView.setText("The " + adjectiveString + " brown " + nounString + " jumped over the lazy dog.");
+		}
+	}
+
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.main, menu);
+		return true;
+	}
+
+}
